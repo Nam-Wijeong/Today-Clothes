@@ -2,6 +2,20 @@ import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import ImgSplash from '../../assets/images/clothes.jpg';
 
+export default function Splash() {
+  const [display, setDisplay] = useState('flex');
+  setTimeout(() => {
+    setDisplay('none')
+  }, 2000);
+  return (
+      <SplaschSec display={display}>
+        <SplashH1>옷늘의 날씨</SplashH1>
+        <SplashImg src={ImgSplash} alt="로고 이미지" />
+        <SplashP>스플래쉬 화면입니다 :)</SplashP>
+      </SplaschSec>    
+  )
+}
+
 const ImageFadeOut = keyframes`
   from {
     opacity: 1;
@@ -36,17 +50,3 @@ const SplashImg = styled.img`
 const SplashP = styled.p`
   font-size: 20px;
 `
-
-export default function Splash() {
-  const [display, setDisplay] = useState('flex');
-  setTimeout(() => {
-    setDisplay('none')
-  }, 2000);
-  return (
-      <SplaschSec display={display}>
-        <SplashH1>옷늘의 날씨</SplashH1>
-        <SplashImg src={ImgSplash} alt="로고 이미지" />
-        <SplashP>스플래쉬 화면입니다 :)</SplashP>
-      </SplaschSec>    
-  )
-}
