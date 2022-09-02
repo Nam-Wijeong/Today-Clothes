@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Main from '../../components/main/Main';
 
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <Main/>
     </>
   )
 }
