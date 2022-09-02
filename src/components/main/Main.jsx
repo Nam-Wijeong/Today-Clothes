@@ -1,7 +1,10 @@
 import React from 'react'
+import Weather from './weather/Weather';
 
 export default function Main() {
   return (
-    <div>Main</div>
+    <div>
+      <Weather/>
+    </div>
   )
 }
