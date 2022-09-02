@@ -3,40 +3,6 @@ import { Link } from 'react-router-dom';
 import Splash from '../../components/splash/Splash';
 import styled from 'styled-components';
 
-const InitForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 375px;
-  margin: 200px auto;
-  padding: 0 30px;
-`
-const InitH1 = styled.h1`
-  font-size: 30px;
-  line-height: 40px;
-  margin-bottom: 20px;
-`
-const InitInp = styled.input`
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid black;
-  outline: none;
-  background-color: transparent;
-  font-size: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
-`
-const InitLink = styled(Link)`
-  width: 100%;
-  cursor: pointer;
-  background-color: lightgrey;
-  color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 18px;
-  text-align: center;
-`
-
 export default function InitPage() {
   const [loading, setLoading] = useState(true);
   const [userName, setUserName] = useState('');
@@ -75,3 +41,37 @@ export default function InitPage() {
     </>
   )
 }
+
+const InitForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 375px;
+  margin: 200px auto;
+  padding: 0 30px;
+`
+const InitH1 = styled.h1`
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 20px;
+`
+const InitInp = styled.input`
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+`
+const InitLink = styled(Link)`
+  width: 100%;
+  cursor: pointer;
+  background-color: lightgrey;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+`
