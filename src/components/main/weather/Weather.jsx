@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import clothesTwenty from '../../../assets/images/clothes_1.png'
-import clothesTwenty2 from '../../../assets/images/clothes_2.png'
-import clothesTwenty3 from '../../../assets/images/clothes_3.png'
+import Clothes1 from '../clothes/Clothes1';
+import Clothes2 from '../clothes/Clothes2';
+import Clothes3 from '../clothes/Clothes3';
+import Clothes4 from '../clothes/Clothes4';
+import Clothes5 from '../clothes/Clothes5';
+import Clothes6 from '../clothes/Clothes6';
+import Clothes7 from '../clothes/Clothes7';
+import Clothes8 from '../clothes/Clothes8';
 
 export default function Weather() {
   const [location, setLocation] = useState('');
@@ -12,8 +16,9 @@ export default function Weather() {
   const [visible, setVisible] = useState(false);
 
   const API_KEY = '914f9c70d886880e8efa0d5c84fadb98'
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&lang=kr&units=metric`  
-
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric&lang=kr`
+  // const API_KEY2 = 'b3a8176206ca49da8978eefacdd98593'
+  // const url2 = `https://api.weatherbit.io/v2.0/forecast/daily?city=${location}&key=${API_KEY2}&lang=kr`
   const searchWeather = async (e) => {
     if(e.key === 'Enter') {
       try {
@@ -45,20 +50,30 @@ export default function Weather() {
                 <WeatherInfo>
                   <h1 className='cityTitle'>{result.data.name}의 현재 날씨는 ?</h1>
                   <img className="weatherIcon" src={`https://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`} alt="날씨 아이콘"  />
+                  <p className='temperature'>{Math.floor(result.data.main.temp)}°C</p>
                   <p className='city'>지역 : {result.data.name}</p>
-                  <p className='temperature'>기온 : {Math.floor(result.data.main.temp)}°C</p>
+                  <p className='feelLikeTemp'>체감 온도 : {Math.floor(result.data.main.feels_like)}°C</p>
+                  <p className='humidity'>습도 : {result.data.main.humidity}%</p>
                   <p className='sky'>날씨 : {result.data.weather[0].description}</p>
                   <ClothesBtn onClick={() => {setVisible(!visible)}}>옷 추천</ClothesBtn>
                 </WeatherInfo>
                 {visible && <ClothesInfo>
                   {
-                    Math.floor(result.data.main.temp) >= 20 && Math.floor(result.data.main.temp) <= 22 ? 
-                    <>
-                      <img src={clothesTwenty2} alt='옷 사진'/>
-                      <img src={clothesTwenty} alt='옷 사진'/>
-                      <img src={clothesTwenty3} alt='옷 사진'/>
-                    </>
-                    : '?'
+                    Math.floor(result.data.main.temp) <= 4 ? 
+                      <Clothes1/>
+                    : Math.floor(result.data.main.temp) >= 5 && Math.floor(result.data.main.temp) <= 8 ?
+                      <Clothes2/>
+                    : Math.floor(result.data.main.temp) >= 9 && Math.floor(result.data.main.temp) <= 11 ?
+                      <Clothes3/>
+                    : Math.floor(result.data.main.temp) >= 12 && Math.floor(result.data.main.temp) <= 16 ?
+                      <Clothes4/>
+                    : Math.floor(result.data.main.temp) >= 17 && Math.floor(result.data.main.temp) <= 19 ?
+                      <Clothes5/>
+                    : Math.floor(result.data.main.temp) >= 20 && Math.floor(result.data.main.temp) <= 22 ?
+                      <Clothes6/>
+                    : Math.floor(result.data.main.temp) >= 23 && Math.floor(result.data.main.temp) <= 27 ?
+                      <Clothes7/>
+                    : <Clothes8/>
                   }
                 </ClothesInfo>
                 }
@@ -74,7 +89,8 @@ const WeatherWrap = styled.div`
   width: 100vw;
   height: 100vh;
   .weatherContentWrap {   
-    width: 390px;
+    width: 500px;
+    min-width: 390px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -103,6 +119,12 @@ const ResultWrap = styled.div`
     display: block;
     margin: 0 auto;
   }
+  .temperature {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 `
 
 const WeatherInfo = styled.article`
@@ -116,15 +138,12 @@ const WeatherInfo = styled.article`
 
 const ClothesInfo = styled.article`
   width: 100%;
+  button {
+    width: 50%;
+  }
   img {
     /* display: grid; */
     width : 50%;
-    &:first-of-type {
-      
-    }
-    &:last-of-type {
-      
-    }
   }
 `
 
@@ -133,13 +152,8 @@ const ClothesBtn = styled.button`
   margin-top: 20px;
   padding: 10px;
   font-size: 16px;
-  color: lightskyblue;
+  /* color: #c4c4c4; */
   background-color: transparent;
-  border: 1px solid lightskyblue;
+  border: 1px solid;
   border-radius: 5px;
-  transition: 0.3s;
-  &:hover {
-    color: #fff;
-    background-color: lightskyblue;
-  }
 `
