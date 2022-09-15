@@ -2,12 +2,18 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import InitPage from './pages/initPage/InitPage';
 import Home from './pages/home/Home';
-import Clothes1 from './components/main/clothes/Clothes1';
 import reset from 'styled-reset';
 import './app.css';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #A6A0C3;
+  }
   a{
     text-decoration : none;
     color : inherit;
@@ -16,10 +22,7 @@ const GlobalStyle = createGlobalStyle`
   button{
     border : none;
     cursor : pointer;
-  }
-
-  * {
-    box-sizing: border-box;
+    background-color: transparent;
   }
 `
 function App() {

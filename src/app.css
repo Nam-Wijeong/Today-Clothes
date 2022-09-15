@@ -1,7 +1,14 @@
-/* body {
-  background-image: url(assets/images/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-} */
+@font-face {
+  font-family: 'SCDream4';
+  src: url('../src/assets/fonts/SCDream4.woff');
+}
+
+@font-face {
+  font-family: 'SCDream5';
+  src: url('../src/assets/fonts/SCDream5.woff');
+}
+
+@font-face {
+  font-family: 'SCDream6';
+  src: url('../src/assets/fonts/SCDream6.woff');
+}
