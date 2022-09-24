@@ -25,6 +25,7 @@ const ImageFadeOut = keyframes`
   }
 `
 const SplaschSec = styled.section`
+  z-index: 1;
   background-color: whitesmoke;
   position: absolute;
   top: 0;
