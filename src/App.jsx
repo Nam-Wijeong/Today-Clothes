@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import InitPage from './pages/initPage/InitPage';
 import Home from './pages/home/Home';
+import Login from './pages/login/Login';
 import reset from 'styled-reset';
 import './app.css';
 
@@ -32,11 +33,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<InitPage/>}/>
+          <Route path='/login' element={<Login/>}/>
           <Route path='/home' element={<Home/>}/>
         </Routes>
       </BrowserRouter>
     </>
-    
   );
 }
 
