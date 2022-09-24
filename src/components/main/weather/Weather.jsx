@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from '../../header/Header';
 import styled from 'styled-components'
 import axios from 'axios';
 import Clothes1 from '../clothes/Clothes1';
@@ -17,7 +18,7 @@ export default function Weather() {
 
   const API_KEY = '914f9c70d886880e8efa0d5c84fadb98'
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}&lang=kr&units=metric&cnt=7`;
- 
+  
   const searchWeather = async (e) => {
     if(e.key === 'Enter') {
       try {
@@ -34,9 +35,9 @@ export default function Weather() {
   }
   return (
     <WeatherWrap>
-      <div className='weatherContentWrap'>
-        <input 
-          className='searchInp'
+      <Header/>
+      <div>
+        <SearchInput
           type="text" 
           placeholder='원하는 지역을 입력해주세요!' 
           value={location}
@@ -47,14 +48,14 @@ export default function Weather() {
             Object.keys(result).length !== 0 && (
               <ResultWrap>
                 <WeatherInfo>
-                  <h1 className='cityTitle'>우리 동네의 현재 날씨는 ?</h1>
-                  <img className="weatherIcon" src={`https://openweathermap.org/img/wn/${result.data.list[1].weather[0].icon}@2x.png`} alt="날씨 아이콘"  />
-                  <p className='temperature'>{Math.floor(result.data.list[1].main.temp)}°C / {result.data.list[1].weather[0].description}</p>
-                  <ul className='weatherList'>
-                    <li>지역 <span>{result.data.city.name}</span></li>
-                    <li>체감 <span>{result.data.list[1].main.feels_like.toFixed(1)}°C</span></li>
-                    <li>습도 <span>{result.data.list[1].main.humidity}%</span></li>
-                  </ul>
+                  <WeatherTitle>우리 동네의 현재 날씨는 ?</WeatherTitle>
+                  <WeatherIcon src={`https://openweathermap.org/img/wn/${result.data.list[1].weather[0].icon}@2x.png`} alt="날씨 아이콘"  />
+                  <Temperature>{Math.floor(result.data.list[1].main.temp)}°C / {result.data.list[1].weather[0].description}</Temperature>
+                  <WeatherListWrap>
+                    <WeatherList>지역 <span>{result.data.city.name}</span></WeatherList>
+                    <WeatherList>체감 <span>{result.data.list[1].main.feels_like.toFixed(1)}°C</span></WeatherList>
+                    <WeatherList>습도 <span>{result.data.list[1].main.humidity}%</span></WeatherList>
+                  </WeatherListWrap>
                   <HourlyWeatherWrap>
                     {result.data.list.map((res, i) => 
                       <li key={i}>
@@ -101,7 +102,7 @@ const WeatherWrap = styled.div`
   font-family: 'SCDream4';
   position: absolute;
   left: 50%;
-  top:50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
@@ -111,7 +112,10 @@ const WeatherWrap = styled.div`
   padding: 20px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    .searchInp {
+    
+`
+
+const SearchInput = styled.input`
     font-family: 'SCDream4';
     width: 100%;
     padding: 8px;
@@ -119,45 +123,54 @@ const WeatherWrap = styled.div`
     border-bottom: 1px solid #c4c4c4;
     outline: none;
     font-size: 16px;
-  }
 `
-
 const ResultWrap = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 6px;
   padding: 20px;
   border-radius: 8px;
-  .cityTitle {
-    font-family: 'SCDream5';
-    font-size: 22px;
-    text-align: center;
-  }
-  .weatherIcon {
-    display: block;
-    margin: 0 auto;
-  }
-  .temperature {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+`
+
+const WeatherTitle = styled.h1`
+  font-family: 'SCDream5';
+  font-size: 22px;
+  text-align: center;
+`
+
+const WeatherIcon = styled.img`
+  display: block;
+  margin: 0 auto;
+`
+
+const Temperature = styled.p`
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
 `
 
 const WeatherInfo = styled.article`
   margin-bottom: 20px;
-  .weatherList {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 14px;
-    margin: 30px 0;
-  }
+`
+
+const WeatherListWrap = styled.ul`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  margin: 24px 0;
+`
+
+const WeatherList = styled.li`
+  background-color: whitesmoke;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 13px;
 `
 
 const ClothesInfo = styled.article`
   img {
-    width : 50%;
+    width : 100%;
   }
 `
 const HourlyWeatherWrap = styled.ul`
@@ -170,7 +183,10 @@ const HourlyWeatherWrap = styled.ul`
     justify-content: center;
     align-items: center;
     margin: 0 10px 30px;
+    padding: 6px;
     font-size: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
     img {
       width: 60px;
     }
@@ -179,7 +195,7 @@ const HourlyWeatherWrap = styled.ul`
 
 const ClothesBtn = styled.button`
   width: 100%;
-  margin-top: 20px;
+  /* margin-top: 5px; */
   padding: 10px;
   font-family: 'SCDream4';
   font-size: 14px;
