@@ -15,3 +15,7 @@
 .clothesWrap li:first-of-type {
   font-size: 16px;
 }
+
+.clothesWrap li:hover {
+  color: grey;
+}
