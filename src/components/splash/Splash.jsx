@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import ImgSplash from '../../assets/images/clothes.jpg';
+import ImgSplash from '../../assets/images/splashImg.jpg';
 
 export default function Splash() {
   const [display, setDisplay] = useState('flex');
