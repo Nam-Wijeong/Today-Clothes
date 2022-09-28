@@ -7,6 +7,17 @@ import './app.css';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+  :root {
+    --color-white : #fff;
+    --color-darkwhite : #f2f2f2;
+    --color-lightgrey : #c4c4c4;
+    --color-lightpurple : #A6A0C3;
+    --color-text : #212121;
+    --color-button : #A6A0C3;
+    --color-enabled : ;
+    --color-disabled : ;
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -14,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: #A6A0C3;
   }
+
   a{
     text-decoration : none;
     color : inherit;
