@@ -1,10 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
 import Slider from 'react-slick/lib/slider'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import styled from 'styled-components'
 
-export default function Carousel({imgSrc1, imgSrc2, imgSrc3}) {
+export default function Carousel({imgSrc1, imgSrc2, imgSrc3, imgSrc4}) {
   const settings = {
     dots: true,
     infinite: true,
@@ -16,13 +16,16 @@ export default function Carousel({imgSrc1, imgSrc2, imgSrc3}) {
     <CarouselWrap>
       <Slider {...settings}>
         <div>
-          <img src={imgSrc1} alt="" />
+          <img src={imgSrc1} alt="옷 이미지" />
         </div>
         <div>
-          <img src={imgSrc2} alt="" />
+          <img src={imgSrc2} alt="옷 이미지" />
         </div>
         <div>
-          <img src={imgSrc3} alt="" />
+          <img src={imgSrc3} alt="옷 이미지" />
+        </div>
+        <div>
+          <img src={imgSrc4} alt="옷 이미지" />
         </div>
       </Slider>
     </CarouselWrap>
@@ -32,7 +35,10 @@ export default function Carousel({imgSrc1, imgSrc2, imgSrc3}) {
 const CarouselWrap = styled.div`
   margin-bottom: 30px;  
   img {
-    width: 100%;
-    height: 230px;
+    height: 240px;
+    object-fit: contain;
+  }
+  .slick-prev:before, .slick-next:before {
+    color: #A6A0C3;
   }
 `
