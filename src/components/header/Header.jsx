@@ -16,7 +16,9 @@ export default function Header() {
         <span>
           {<FontAwesomeIcon icon={faFaceSmile} />}
         </span>
-       {window.localStorage.getItem('userName')}님, 안녕하세요!
+        <span>
+          {window.localStorage.getItem('userName')}님, 안녕하세요!
+        </span>
       </li>
     </HeaderUl>
   )
