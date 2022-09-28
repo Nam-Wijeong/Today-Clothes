@@ -110,17 +110,18 @@ const WeatherWrap = styled.div`
   max-height: 844px;
   overflow: hidden;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     
 `
 
 const SearchInput = styled.input`
     font-family: 'SCDream4';
+    background-color: var(--color-white);
     width: 100%;
     padding: 8px;
     border: none;
-    border-bottom: 1px solid #c4c4c4;
+    border-bottom: 1px solid var(--color-lightgrey);
     outline: none;
     font-size: 16px;
 `
@@ -162,7 +163,7 @@ const WeatherListWrap = styled.ul`
 `
 
 const WeatherList = styled.li`
-  background-color: whitesmoke;
+  background-color: var(--color-darkwhite);
   padding: 8px;
   border-radius: 10px;
   font-size: 13px;
@@ -182,7 +183,7 @@ const HourlyWeatherWrap = styled.ul`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 10px 30px;
+    margin: 0 10px 10px;
     padding: 6px;
     font-size: 12px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -195,11 +196,11 @@ const HourlyWeatherWrap = styled.ul`
 
 const ClothesBtn = styled.button`
   width: 100%;
-  /* margin-top: 5px; */
+  margin-top: 10px;
   padding: 10px;
   font-family: 'SCDream4';
   font-size: 14px;
-  border: 1px solid;
+  border: 1px solid var(--color-lightgrey);
   border-radius: 5px;
 `
 
