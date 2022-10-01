@@ -56,21 +56,22 @@ const InitForm = styled.form`
   max-height: 844px;
   padding: 200px 30px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--color-white);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 `
 const InitH1 = styled.h1`
-  font-family: 'SCDream5';
+  font-family: 'SCDream4';
+  color: var(--color-text);
   font-size: 28px;
   line-height: 40px;
   margin-bottom: 20px;
 `
 const InitInp = styled.input`
   width: 100%;
+  color: var(--color-text);
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--color-lightpurple);
   outline: none;
-  background-color: transparent;
   font-size: 18px;
   margin-bottom: 20px;
   padding: 10px;
@@ -80,9 +81,9 @@ const InitLink = styled(Link)`
   cursor: pointer;
   display: block;
   width: 100%;
-  background-color: lightgrey;
-  color: #fff;
-  padding: 10px;
+  background-color: var(--color-lightpurple);
+  color: var(--color-white);
+  padding: 14px;
   border-radius: 10px;
   font-family: 'SCDream4';
   font-size: 16px;
