@@ -26,7 +26,6 @@ export default function Weather() {
           method : 'get',
           url : url,
         })        
-        console.log(data);
         setResult(data)
       } catch(err) {
         alert(err)

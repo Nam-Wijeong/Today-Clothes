@@ -9,7 +9,6 @@ export default function InitPage() {
 
   useEffect(() => {
     setLoading(false)
-    console.log('로딩');
   }, [])
 
   const saveData = () => {

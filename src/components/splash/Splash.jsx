@@ -11,7 +11,7 @@ export default function Splash() {
       <SplaschSec display={display}>
         <SplashH1>옷늘의 날씨</SplashH1>
         <SplashImg src={ImgSplash} alt="로고 이미지" />
-        <SplashP>스플래쉬 화면입니다 :)</SplashP>
+        <SplashP>잠시만 기다려주세요 :)</SplashP>
       </SplaschSec>    
   )
 }
@@ -26,17 +26,20 @@ const ImageFadeOut = keyframes`
 `
 const SplaschSec = styled.section`
   z-index: 1;
-  background-color: whitesmoke;
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-width: 390px;
+  max-height: 844px;
+  overflow: hidden;
+  background-color: whitesmoke;
   display: ${props => props.display};
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  min-width: 375px; 
   animation: 0.7s ease-in-out ${ImageFadeOut} forwards;
   animation-delay: 0.7s;
 `
