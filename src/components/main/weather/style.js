@@ -66,7 +66,7 @@ const WeatherListWrap = styled.ul`
 
 const WeatherList = styled.li`
   background-color: var(--color-darkwhite);
-  padding: 8px;
+  padding: 8px 5px;
   border-radius: 10px;
   font-size: 13px;
 `
