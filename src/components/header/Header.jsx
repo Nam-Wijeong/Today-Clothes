@@ -1,7 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faFaceSmile} from '@fortawesome/free-solid-svg-icons'
+import { faFaceSmile } from '@fortawesome/free-solid-svg-icons';
+import { HeaderUl } from './style';
 
 export default function Header() {
   const today = new Date();
@@ -24,12 +23,3 @@ export default function Header() {
   )
 }
 
-const HeaderUl = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  font-size: 12px;
-  span {
-    margin-right: 4px;
-  }
-`

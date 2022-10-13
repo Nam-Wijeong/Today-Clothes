@@ -1,10 +1,10 @@
 import React from 'react';
-import Main from '../../components/main/Main';
+import Weather from '../../components/main/weather/Weather';
 
 export default function Home() {
   return (
     <>
-      <Main/>
+      <Weather/>
     </>
   )
 }
