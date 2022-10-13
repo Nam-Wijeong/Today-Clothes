@@ -6,7 +6,6 @@ const ClothesWrap = styled.ul`
   align-items: center;
   background-color: whitesmoke;
   border-radius: 10px;
-  margin-bottom: 20px;
   padding: 12px;
   li {
     font-size: 12px;

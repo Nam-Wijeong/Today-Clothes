@@ -10,7 +10,7 @@ const WeatherWrap = styled.div`
   height: 100%;
   max-width: 390px;
   max-height: 844px;
-  overflow: hidden;
+  overflow: auto;
   padding: 20px;
   background-color: var(--color-white);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -31,7 +31,7 @@ const ResultWrap = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 6px;
-  padding: 20px;
+  padding: 20px 20px 0;
   border-radius: 8px;
 `
 
@@ -100,6 +100,7 @@ const ClothesBtn = styled.button`
   width: 100%;
   margin-top: 10px;
   padding: 10px;
+  color: #000;
   font-family: 'SCDream4';
   font-size: 14px;
   border: 1px solid var(--color-lightgrey);
