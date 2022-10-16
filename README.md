@@ -11,4 +11,50 @@
 - Front-End : React, Styled-Components, Axios, React Router(V6)
 - Back-End : OpenWeatherMap API(https://openweathermap.org/)
 
-## 구현 기능
+## 💻 구현 기능
+
+<div>
+
+|Splash & 시작화면 | 유저이름 입력 | 지역 검색 & 옷 추천|
+|:---:|:---:|:---:|
+|<img src="https://user-images.githubusercontent.com/99578007/196025627-5b855f62-307c-4368-85e9-16276483a02f.gif" width=310 />|<img src="https://user-images.githubusercontent.com/99578007/196025682-d64ac80c-331d-4236-8df6-204570fbe126.gif" width=310 />|<img src="https://user-images.githubusercontent.com/99578007/196025685-068fde1a-bc3b-44a5-97a4-7d93d2316234.gif" width=310 /> 
+
+</div>
+
+### [Splash & 시작화면]	
+- Splash 화면이 보이고 시작화면으로 넘어갑니다.
+- 사용할 이름을 입력할 수 있습니다.
+
+### [유저이름 입력]
+- 사용할 이름을 입력하고 다음 페이지로 넘어갑니다.
+- 입력한 이름은 로컬스토리지에 저장됩니다.
+
+### [지역 검색 & 옷 추천]
+- 화면 상단에 오늘 날짜와 입력한 이름이 저장되어 보입니다.
+- 원하는 지역을 시, 군, 구 단위로 검색할 수 있습니다.
+- 검색한 지역의 현재 날씨와 시간대별 날씨 정보를 확인할 수 있습니다.
+- 옷 추천 버튼을 클릭하면 현재 기온에 맞는 옷차림을 사진과 텍스트로 추천받을 수 있습니다.
+
+## 📁 폴더 구조
+```
+├─📦public
+│  ├─📄favicon.ico
+│  └─📄index.html
+└─📦src
+   ├─📂assets
+   │ ├─📁fonts
+   │ └─📁images
+   ├─📂components
+   │ ├─📁carousel
+   │ ├─📁header
+   │ ├─📁main
+   │ └─📁splash
+   ├─📂pages
+   │ ├─📁home
+   │ └─📁initPage
+   ├─📂styles
+   │ ├─📄common.js
+   │ └─📄font.css
+   ├─📄App.jsx
+   └─📄index.js
+```
