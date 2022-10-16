@@ -17,7 +17,7 @@
 
 |Splash & 시작 화면 | 유저 이름 입력 | 지역 검색 & 옷 추천| 에러 화면 |
 |:---:|:---:|:---:|:---:|
-|<img src="https://user-images.githubusercontent.com/99578007/196025627-5b855f62-307c-4368-85e9-16276483a02f.gif" width=200 />|<img src="https://user-images.githubusercontent.com/99578007/196025682-d64ac80c-331d-4236-8df6-204570fbe126.gif" width=200 />|<img src="https://user-images.githubusercontent.com/99578007/196025685-068fde1a-bc3b-44a5-97a4-7d93d2316234.gif" width=200 />|<img src="https://user-images.githubusercontent.com/99578007/196033598-3f41d3fa-8d83-4002-b129-42f8890cb21f.gif" width=200 />
+|<img src="https://user-images.githubusercontent.com/99578007/196025627-5b855f62-307c-4368-85e9-16276483a02f.gif" width=180 />|<img src="https://user-images.githubusercontent.com/99578007/196025682-d64ac80c-331d-4236-8df6-204570fbe126.gif" width=180 />|<img src="https://user-images.githubusercontent.com/99578007/196025685-068fde1a-bc3b-44a5-97a4-7d93d2316234.gif" width=180 />|<img src="https://user-images.githubusercontent.com/99578007/196033598-3f41d3fa-8d83-4002-b129-42f8890cb21f.gif" width=180 />
 
 </div>
 
