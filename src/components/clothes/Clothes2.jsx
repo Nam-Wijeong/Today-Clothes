@@ -1,9 +1,9 @@
 import React from 'react';
-import Carousel from '../../carousel/Carousel';
-import clothes5_1 from '../../../assets/images/5W_1.png';
-import clothes5_2 from '../../../assets/images/5W_2.png';
-import clothes5_3 from '../../../assets/images/5M_1.png';
-import clothes5_4 from '../../../assets/images/5M_2.png';
+import Carousel from '../carousel/Carousel';
+import clothes5_1 from '../../assets/images/5W_1.png';
+import clothes5_2 from '../../assets/images/5W_2.png';
+import clothes5_3 from '../../assets/images/5M_1.png';
+import clothes5_4 from '../../assets/images/5M_2.png';
 import { ClothesWrap } from './style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShirt } from '@fortawesome/free-solid-svg-icons';

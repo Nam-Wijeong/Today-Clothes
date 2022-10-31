@@ -1,8 +1,8 @@
-import Carousel from '../../carousel/Carousel';
-import clothes28_1 from '../../../assets/images/28W_1.png';
-import clothes28_2 from '../../../assets/images/28W_2.png';
-import clothes28_3 from '../../../assets/images/28M_1.png';
-import clothes28_4 from '../../../assets/images/28M_2.png';
+import Carousel from '../carousel/Carousel';
+import clothes28_1 from '../../assets/images/28W_1.png';
+import clothes28_2 from '../../assets/images/28W_2.png';
+import clothes28_3 from '../../assets/images/28M_1.png';
+import clothes28_4 from '../../assets/images/28M_2.png';
 import { ClothesWrap } from './style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShirt } from '@fortawesome/free-solid-svg-icons';
