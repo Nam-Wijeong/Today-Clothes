@@ -13,8 +13,10 @@ const InitForm = styled.form`
   padding: 200px 30px;
   overflow: hidden;
   background-color: var(--color-white);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-`
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+`;
 const InitH1 = styled.h1`
   font-family: 'SCDream4';
   color: var(--color-text);
@@ -29,7 +31,7 @@ const InitH1 = styled.h1`
       rgba(0, 0, 0, 0) 50%
     );
   }
-`
+`;
 const InitInp = styled.input`
   width: 100%;
   color: var(--color-text);
@@ -40,7 +42,7 @@ const InitInp = styled.input`
   margin-bottom: 20px;
   padding: 10px;
   font-family: 'SCDream4';
-`
+`;
 const InitLink = styled(Link)`
   cursor: pointer;
   display: block;
@@ -52,11 +54,6 @@ const InitLink = styled(Link)`
   font-family: 'SCDream4';
   font-size: 16px;
   text-align: center;
-`
+`;
 
-export {
-  InitForm,
-  InitH1,
-  InitInp,
-  InitLink
-}
+export { InitForm, InitH1, InitInp, InitLink };

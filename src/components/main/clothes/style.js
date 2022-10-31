@@ -11,11 +11,11 @@ const ClothesWrap = styled.ul`
     font-size: 12px;
   }
   li:first-of-type {
-  font-size: 16px;
+    font-size: 16px;
   }
   li:hover {
-  color: grey;
-}
-`
+    color: grey;
+  }
+`;
 
-export { ClothesWrap }
+export { ClothesWrap };

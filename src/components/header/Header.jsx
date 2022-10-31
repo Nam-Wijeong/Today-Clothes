@@ -9,17 +9,14 @@ export default function Header() {
   return (
     <HeaderUl>
       <li>
-        {`${today.getFullYear()}.${today.getMonth() + 1}.${today.getDate()} ${dayArray[today.getDay()]}`}
+        {`${today.getFullYear()}.${today.getMonth() + 1}.${today.getDate()} ${
+          dayArray[today.getDay()]
+        }`}
       </li>
       <li>
-        <span>
-          {<FontAwesomeIcon icon={faFaceSmile} />}
-        </span>
-        <span>
-          {window.localStorage.getItem('userName')}님, 안녕하세요!
-        </span>
+        <span>{<FontAwesomeIcon icon={faFaceSmile} />}</span>
+        <span>{window.localStorage.getItem('userName')}님, 안녕하세요!</span>
       </li>
     </HeaderUl>
-  )
+  );
 }
-

@@ -8,6 +8,6 @@ const HeaderUl = styled.ul`
   span {
     margin-right: 4px;
   }
-`
+`;
 
-export { HeaderUl }
+export { HeaderUl };

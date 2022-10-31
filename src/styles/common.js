@@ -32,6 +32,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     padding: 0;
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
