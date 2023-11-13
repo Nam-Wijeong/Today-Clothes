@@ -1,21 +1,15 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import GlobalStyle from './styles/common';
-import Home from './pages/home/Home';
-import InitPage from './pages/initPage/InitPage';
-import './styles/common';
+import React from 'react'
+import { Outlet } from 'react-router'
+import Header from './components/Header'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-function App() {
+export default function App() {
+  const queryClient = new QueryClient();
+
   return (
-    <>
-      <GlobalStyle />
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<InitPage />} />
-          <Route path='/home' element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+    <QueryClientProvider client={queryClient}>
+      <Header />
+      <Outlet />
+    </QueryClientProvider>
+  )
 }
-
-export default App;
