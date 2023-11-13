@@ -29,8 +29,7 @@ export default function Weather() {
   const [result, setResult] = useState({});
   const [visible, setVisible] = useState(false);
 
-  const API_KEY = '914f9c70d886880e8efa0d5c84fadb98';
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}&lang=kr&units=metric&cnt=7`;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&lang=kr&units=metric&cnt=7`;
 
   const searchWeather = async (e) => {
     if (e.key === 'Enter') {
