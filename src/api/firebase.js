@@ -1,7 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
-import { getDatabase, ref, set, get, remove } from "firebase/database";
-import { getStorage } from "firebase/storage";
+import { getDatabase, ref, get } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -14,10 +13,19 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 const database = getDatabase(app);
-// const storage = getStorage(app);
-// const storageRef = ref(storage);
-// const imagesRef = ref(storage, 'images');
 
+export function login() {
+  signInWithPopup(auth, provider).catch(console.error);
+}
+export function logout() {
+  signOut(auth);
+}
+
+export function onUserStateChange(callback) {
+  onAuthStateChanged(auth, async (user) => {
+    callback(user);
+  });
+}
 
 // 옷 이미지
 export async function getClothes() {
