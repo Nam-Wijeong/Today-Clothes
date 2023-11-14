@@ -28,10 +28,26 @@ export function onUserStateChange(callback) {
 }
 
 // 옷 이미지
-export async function getClothes() {
+export async function getClothes(temp) {
   return get(ref(database, 'data')).then(snapshot => {
     if (snapshot.exists()) {
-      return Object.values(snapshot.val());
+      if (temp <= 4) {
+        return Object.values(snapshot.val())[0];
+      } else if (temp > 5 && temp <= 8) {
+        return Object.values(snapshot.val())[1];
+      } else if (temp > 8 && temp <= 11) {
+        return Object.values(snapshot.val())[2];
+      } else if (temp > 11 && temp <= 16) {
+        return Object.values(snapshot.val())[3];
+      } else if (temp > 16 && temp <= 19) {
+        return Object.values(snapshot.val())[4];
+      } else if (temp > 19 && temp <= 22) {
+        return Object.values(snapshot.val())[5];
+      } else if (temp > 22 && temp <= 27) {
+        return Object.values(snapshot.val())[6];
+      } else if (temp > 27) {
+        return Object.values(snapshot.val())[7];
+      }
     }
     return [];
   })
