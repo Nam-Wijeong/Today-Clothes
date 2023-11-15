@@ -35,7 +35,7 @@
 
 |로그인&로그아웃 | 지역 검색 | 옷 추천 |
 |:---:|:---:|:---:|
-|<img src="https://github.com/Nam-Wijeong/Today-Clothes/assets/99578007/6d1f930a-d8fc-41da-808e-4bf449a335ea" width=400 />|<img src="https://github.com/Nam-Wijeong/Today-Clothes/assets/99578007/38248187-6af4-41db-b488-62cfede9f63e" width=400 />|<img src="https://github.com/Nam-Wijeong/Today-Clothes/assets/99578007/71f6445a-2dda-4d64-8c07-8cf67db3f9ea" width=400 />
+|<img src="https://github.com/Nam-Wijeong/Today-Clothes/assets/99578007/c8f1b594-c047-4341-96d2-2483c8c59d88" width=400 height=260 />|<img src="https://github.com/Nam-Wijeong/Today-Clothes/assets/99578007/38248187-6af4-41db-b488-62cfede9f63e" width=340 />|<img src="https://github.com/Nam-Wijeong/Today-Clothes/assets/99578007/71f6445a-2dda-4d64-8c07-8cf67db3f9ea" width=340 />
 
 </div>
 
