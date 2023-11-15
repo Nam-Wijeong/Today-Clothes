@@ -27,7 +27,6 @@ export function onUserStateChange(callback) {
   });
 }
 
-// 옷 이미지
 export async function getClothes(temp) {
   return get(ref(database, 'data')).then(snapshot => {
     if (snapshot.exists()) {

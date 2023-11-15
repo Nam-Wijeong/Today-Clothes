@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useUserContext } from '../context/UserContext';
-import Button from './Button';
 import { AiOutlineHome } from 'react-icons/ai'
+import Button from './Button';
+
 export default function Header() {
   const { user, login, logout } = useUserContext();
   const date = new Date();

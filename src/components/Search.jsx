@@ -3,6 +3,7 @@ import { getHourlyWeather, getSearchWeather } from '../api/weather';
 import { BiSearch } from 'react-icons/bi';
 import Weather from './Weather';
 import Loading from './Loading';
+
 export default function Search() {
   const [isLoading, setIsLoading] = useState(false);
   const [keyword, setKeyword] = useState('');

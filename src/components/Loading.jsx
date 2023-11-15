@@ -1,14 +1,15 @@
 import React from 'react'
-import { Hearts } from 'react-loader-spinner'
+import { Oval } from 'react-loader-spinner'
 
 export default function Loading() {
   return (
     <div className='flex items-center'>
-      <Hearts 
-        height='140'
-        width='140'
+      <Oval 
+        height='120'
+        width='120'
         color='#e8b5be'
-        ariaLabel='hearts-loading'
+        secondaryColor="#e93254"
+        ariaLabel='oval-loading'
         visible={true}
       />
     </div>

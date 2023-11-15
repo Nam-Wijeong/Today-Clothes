@@ -1,11 +1,10 @@
-import { useQuery } from '@tanstack/react-query';
 import React from 'react'
-import { useLocation } from 'react-router-dom';
-import { getClothes } from '../api/firebase';
-import Carousel from '../components/Carousel';
+import { useQuery } from '@tanstack/react-query';
+import { useLocation, Link } from 'react-router-dom';
 import { FaTemperatureHigh } from 'react-icons/fa';
 import { AiOutlineHome } from 'react-icons/ai'
-import { Link } from 'react-router-dom';
+import { getClothes } from '../api/firebase';
+import Carousel from '../components/Carousel';
 import Loading from '../components/Loading';
 
 export default function Clothes() {
@@ -14,7 +13,7 @@ export default function Clothes() {
   const { isLoading, data } = useQuery({
     queryKey: ['data'],
     queryFn: () => getClothes(temp),
-    staleTime: 1000
+    staleTime: 0
   });
   return (
     <>
