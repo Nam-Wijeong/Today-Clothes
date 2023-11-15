@@ -6,7 +6,7 @@
 - 실시간으로 변하는 날씨, 특히 예측하기 어려운 환절기가 올 때마다 어떤 옷을 입어야 하는지 고민이 됐습니다.
 - 이런 어려움을 해결하고 싶어 기온에 맞는 옷차림을 추천해주는 서비스를 개발하게 되었습니다.
 - 원하는 지역을 검색하면 해당 지역의 현재 기온과 그에 맞는 옷차림을 추천받을 수 있습니다.
- 
+
 ## 🛠 기술 스택
 - Front-End : React, React Query, Tailwind CSS
 - Back-End : Firebase, OpenWeatherMap API(https://openweathermap.org/)
@@ -33,9 +33,9 @@
 
 <div>
 
-|유저 이름 입력 | 지역 검색 & 옷 추천| 에러 화면 |
+|로그인&로그아웃 | 지역 검색 | 옷 추천 |
 |:---:|:---:|:---:|
-|<img src="https://user-images.githubusercontent.com/99578007/196025682-d64ac80c-331d-4236-8df6-204570fbe126.gif" width=180 />|<img src="https://user-images.githubusercontent.com/99578007/196025685-068fde1a-bc3b-44a5-97a4-7d93d2316234.gif" width=180 />|<img src="https://user-images.githubusercontent.com/99578007/196033598-3f41d3fa-8d83-4002-b129-42f8890cb21f.gif" width=180 />
+|<img src="https://github.com/Nam-Wijeong/Today-Clothes/assets/99578007/6d1f930a-d8fc-41da-808e-4bf449a335ea" width=400 />|<img src="https://github.com/Nam-Wijeong/Today-Clothes/assets/99578007/38248187-6af4-41db-b488-62cfede9f63e" width=400 />|<img src="https://github.com/Nam-Wijeong/Today-Clothes/assets/99578007/71f6445a-2dda-4d64-8c07-8cf67db3f9ea" width=400 />
 
 </div>
 
@@ -43,13 +43,13 @@
 - 파이어베이스 구글 연동으로 로그인, 로그아웃을 할 수 있습니다.
 - 로그인 상태인 경우 화면 상단에 유저 이름을 확인할 수 있습니다.
 
-### [지역 검색 & 옷 추천]
+### [지역 검색]
 - 원하는 지역을 시, 군, 구 단위로 검색할 수 있습니다.
 - 검색한 지역의 현재 날씨와 시간대별 날씨 정보를 확인할 수 있습니다.
-- 옷 추천 버튼을 클릭하면 현재 기온에 맞는 옷차림을 사진과 텍스트로 추천받을 수 있습니다.
 
-### [에러 화면]
-- 잘못된 지역명을 검색할 경우 '정확한 지역을 입력해주세요'라는 메세지가 보입니다.
+### [옷 추천]
+- 옷 추천 버튼을 클릭하면 현재 기온에 맞는 옷차림을 사진과 텍스트로 추천받을 수 있습니다.
+- 화면 상단의 홈 아이콘을 클릭하면 메인 화면으로 이동합니다.
 
 ## 📁 폴더 구조
 ```
